@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,100 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background-color: #202632;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width: 60%;
+  max-width: 400px;
+  background-color: #313a49;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: hsl(150, 100%, 66%);
+}
+
+.advice{
+  font-size: 30px;
+  color: hsl(193, 38%, 86%);
+  text-align: center;
+  margin-top: 28px;
+  font-family: 'Manrope';
+}
+
+.divider{
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.dice{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(150, 100%, 66%);
+  position: absolute;
+  bottom: -25px;
+  cursor: pointer;
+  box-shadow: hsl(150, 49%, 34%) 0px 3px 8px;
+  transition: all ease-in-out 0.3s;
+}
+
+.dice > img {
+  transition: all ease-in-out 0.3s;
+}
+
+.dice:hover{
+  box-shadow: hsl(150, 82%, 63%) 0px 7px 15px;
+}
+
+.dice:hover > img {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.3s;
+}
+.dice-animation{
+  animation: rotatedice infinite 2s;
+}
+@keyframes rotatedice {
+  0%{
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(280deg);
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  80%{
+    transform: rotate(70deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
 }
